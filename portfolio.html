@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+	background: rgb(5, 68, 104);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 225px;
+	height: 100%;
+	padding: 20px 0;
+	transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-top: 70px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+	display: block;
+	width: 180px;
+	height: 180px;
+    border-radius: 50%;
+	margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+	color: #ffffff;
+	margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+	color: rgb(206, 240, 253);
+	font-size: 14px;
+}
+
+.wrapper .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #10558d;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+	color: #0c7db1;
+
+	background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+	color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+	display: block;
+}
+
+.wrapper .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+	background: rgb(7, 105, 185);
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+ 
+}
+
+.wrapper .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+	color: #a2ecff;
+}
+
+ 
+
+body.active .wrapper .sidebar{
+	left: -225px;
+}
+
+body.active .wrapper .section{
+	margin-left: 0;
+	width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  width: 180px;
+  border-radius: 90%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.profilepic{
+    height: 80px;
+    width: 80px;
+}
+
+    </style>
+</head>
+<body>
+   
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="about-content">
+                My Architecture is easy to understand and enjoy, i hope it also is hard to forget.
+            </div>
+            <div class="skill-content" style="display: none;">
+                MY SKILLS
+            </div>
+            <div class="journey-content" style="display: none;">
+                MY JOURNEY
+            </div>
+            <div class="works-content" style="display: none;">
+                MY WORKS
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <div class="container">
+                    <img src="./userimage.jpeg" alt="profile_picture" class="profilepic" height="">
+                    <div class="overlay">
+                        <div class="text">Please move that shit away from my face !!</div>
+                    </div>
+                </div>
+                <h3>Bhargavi Kolli</h3>
+                <p>Architect</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="about-sidebar active">
+                        <span class="icon"><i class="fas fa-user-circle"></i></span>
+                        <span class="item">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="skill-sidebar">
+                        <span class="icon"><i class="fas fa-certificate"></i></span>
+                        <span class="item">Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="journey-sidebar">
+                        <span class="icon"><i class="fas fa-heart"></i></span>
+                        <span class="item">Me, so far .....</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="works-sidebar">
+                        <span class="icon"><i class="fas fa-paint-brush"></i></span>
+                        <span class="item">Works</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+  <script>
+        var hamburger = document.querySelector(".hamburger");
+	    hamburger.addEventListener("click", function(){
+		    document.querySelector("body").classList.toggle("active");
+	    })
+        var skillSidebar = document.querySelector(".about-sidebar");
+	    skillSidebar.addEventListener("click", function(){
+            document.querySelector(".about-sidebar").classList.add("active");
+		    document.querySelector(".skill-sidebar").classList.remove("active");
+            document.querySelector(".journey-sidebar").classList.remove("active");
+		    document.querySelector(".works-sidebar").classList.remove("active");
+            document.querySelector(".about-content").style.display = "block";
+		    document.querySelector(".skill-content").style.display = "none";
+            document.querySelector(".journey-content").style.display = "none";
+		    document.querySelector(".works-content").style.display = "none";
+	    })
+        var skillSidebar = document.querySelector(".skill-sidebar");
+	    skillSidebar.addEventListener("click", function(){
+            document.querySelector(".about-sidebar").classList.remove("active");
+		    document.querySelector(".skill-sidebar").classList.add("active");
+            document.querySelector(".journey-sidebar").classList.remove("active");
+		    document.querySelector(".works-sidebar").classList.remove("active");
+            document.querySelector(".about-content").style.display = "none";
+		    document.querySelector(".skill-content").style.display = "block";
+            document.querySelector(".journey-content").style.display = "none";
+		    document.querySelector(".works-content").style.display = "none";
+	    })
+        var skillSidebar = document.querySelector(".journey-sidebar");
+	    skillSidebar.addEventListener("click", function(){
+            document.querySelector(".about-sidebar").classList.remove("active");
+		    document.querySelector(".skill-sidebar").classList.remove("active");
+            document.querySelector(".journey-sidebar").classList.add("active");
+		    document.querySelector(".works-sidebar").classList.remove("active");
+            document.querySelector(".about-content").style.display = "none";
+		    document.querySelector(".skill-content").style.display = "none";
+            document.querySelector(".journey-content").style.display = "block";
+		    document.querySelector(".works-content").style.display = "none";
+	    })
+        var skillSidebar = document.querySelector(".works-sidebar");
+	    skillSidebar.addEventListener("click", function(){
+            document.querySelector(".about-sidebar").classList.remove("active");
+		    document.querySelector(".skill-sidebar").classList.remove("active");
+            document.querySelector(".journey-sidebar").classList.remove("active");
+		    document.querySelector(".works-sidebar").classList.add("active");
+            document.querySelector(".about-content").style.display = "none";
+		    document.querySelector(".skill-content").style.display = "none";
+            document.querySelector(".journey-content").style.display = "none";
+		    document.querySelector(".works-content").style.display = "block";
+	    })
+  </script>
+</body>
+</html>
